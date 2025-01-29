@@ -1,16 +1,27 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  Github,
+  Linkedin,
+  InstagramIcon,
+  Mail,
+  MapPin,
+  Coffee,
+  Code2,
+  Palette,
+} from "lucide-react";
 import profileImage from "./assets/profile.jpg";
+import { FaReact} from 'react-icons/fa';
 
-const App: React.FC = () => {
+
+
+function App() {
   return (
     <div className="bg-stone-50 min-h-screen">
-      {/*Header*/}
+      {/* Header */}
       <header
         className="relative h-screen flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0,0,0,0.5)), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")',
+            'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")',
         }}
       >
         <nav className="absolute top-0 w-full p-6">
@@ -50,31 +61,34 @@ const App: React.FC = () => {
           </ul>
         </nav>
         <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Larissa Nogueira da Rocha</h1>
-          <p className="text-xl mb-8">Desenvolvedora Mobile</p>
+          <h1 className="text-5xl font-bold mb-4">Larissa Rocha</h1>
+          <p className="text-xl mb-8">
+            Desenvolvedora Mobile | Flutter & Swift
+          </p>
           <div className="flex justify-center space-x-4">
             <a
               href="https://github.com/hpzynha"
               className="text-white hover:text-amber-400 transition-colors"
             >
-              <FaGithub size={24} />
+              <Github size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/larissanrocha/"
               className="text-white hover:text-amber-400 transition-colors"
             >
-              <FaLinkedin size={24} />
+              <Linkedin size={24} />
             </a>
             <a
-              href="https://www.instagram.com/dav.lari"
+              href="https://www.instagram.com/dev.lari"
               className="text-white hover:text-amber-400 transition-colors"
             >
-              <FaInstagram size={24} />
+              <InstagramIcon size={24} />
             </a>
           </div>
         </div>
       </header>
-      {/*Sobre*/}
+
+      {/* Sobre */}
       <section id="sobre" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Sobre Mim</h2>
@@ -86,17 +100,239 @@ const App: React.FC = () => {
             />
             <div className="flex-1">
               <p className="text-lg leading-relaxed text-gray-700">
-                Sou um desenvolvedor mobile apaixonado por criar aplicativos
-                bonitos e funcionais. Adoro trabalhar com Flutter e Swift, e
-                estou sempre em busca de novos desafios. Quando não estou
-                codando, você pode me encontrar em cafeterias locais, explorando
-                novos lugares ou contribuindo para projetos open source.
+                Sou uma desenvolvedora mobile apaixonada por criar aplicativos
+                bonitos, performáticos e escaláveis com{" "}
+                <strong>Flutter e Dart</strong>. 
+                Adoro explorar novas tecnologias, aprimorar arquiteturas como{" "}
+                <strong>Clean Architecture e MVVM</strong> e otimizar a
+                experiência do usuário com interfaces modernas e responsivas.
+                Sempre em busca de novos desafios, também gosto de contribuir
+                para projetos open source e compartilhar conhecimento com a
+                comunidade Flutter.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Projetos */}
+      <section id="projetos" className="py-20 px-4 bg-stone-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Projetos</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt="Projeto Receitas"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">App de Receitas</h3>
+                <p className="text-gray-600 mb-4">
+                  Um app de receitas criado com Flutter, integrando API de
+                  receitas e funcionalidades offline.
+                </p>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                    Flutter
+                  </span>
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    Firebase
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt="Projeto Finanças"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">App de Finanças</h3>
+                <p className="text-gray-600 mb-4">
+                  Um app de gerenciamento financeiro desenvolvido em Swift, com
+                  sincronização em nuvem.
+                </p>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">
+                    Swift
+                  </span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
+                    CloudKit
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Habilidades */}
+      <section id="habilidades" className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Habilidades</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex items-center gap-4">
+              <FaReact className="w-8 h-8 text-amber-600" />
+              <div className="flex-1">
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">React</span>
+                  <span>60%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-amber-600 rounded-full"
+                    style={{ width: "90%" }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Code2 className="w-8 h-8 text-amber-600" />
+              <div className="flex-1">
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">Swift</span>
+                  <span>85%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-amber-600 rounded-full"
+                    style={{ width: "85%" }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Coffee className="w-8 h-8 text-amber-600" />
+              <div className="flex-1">
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">Dart</span>
+                  <span>80%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-amber-600 rounded-full"
+                    style={{ width: "80%" }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Palette className="w-8 h-8 text-amber-600" />
+              <div className="flex-1">
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">UI/UX Design</span>
+                  <span>75%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded-full">
+                  <div
+                    className="h-2 bg-amber-600 rounded-full"
+                    style={{ width: "75%" }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="py-20 px-4 bg-stone-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Contato</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Mail className="text-amber-600" />
+                  <span>larissa.nogueira.rocha@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="text-amber-600" />
+                  <span>São Paulo, SP</span>
+                </div>
+              </div>
+            </div>
+            <form className="space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Nome
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Mensagem
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-amber-600 text-white py-2 px-4 rounded-md hover:bg-amber-700 transition-colors"
+              >
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-stone-800 text-white py-8">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              <p>© 2024 Larissa Rocha. Todos os direitos reservados.</p>
+            </div>
+            <div className="flex space-x-4">
+              <a href="#" className="hover:text-amber-400 transition-colors">
+                <Github size={20} />
+              </a>
+              <a href="#" className="hover:text-amber-400 transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="#" className="hover:text-amber-400 transition-colors">
+                <InstagramIcon size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
-};
+}
+
 export default App;
