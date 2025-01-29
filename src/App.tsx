@@ -1,17 +1,14 @@
-import {
-  Github,
-  Linkedin,
-  InstagramIcon,
-  Mail,
-  MapPin,
-  Coffee,
-  Code2,
-  Palette,
-} from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import profileImage from "./assets/profile.jpg";
-import { FaReact} from 'react-icons/fa';
-
-
+import {
+  FaReact,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaPython,
+  FaSwift,
+} from "react-icons/fa";
+import { FaFlutter } from "react-icons/fa6";
 
 function App() {
   return (
@@ -29,7 +26,7 @@ function App() {
             <li>
               <a
                 href="#sobre"
-                className="hover:text-amber-400 transition-colors"
+                className="hover:text-custom-blue-light transition-colors"
               >
                 Sobre
               </a>
@@ -37,7 +34,7 @@ function App() {
             <li>
               <a
                 href="#projetos"
-                className="hover:text-amber-400 transition-colors"
+                className="hover:text-custom-blue-light transition-colors"
               >
                 Projetos
               </a>
@@ -45,7 +42,7 @@ function App() {
             <li>
               <a
                 href="#habilidades"
-                className="hover:text-amber-400 transition-colors"
+                className="hover:text-custom-blue-light transition-colors"
               >
                 Habilidades
               </a>
@@ -53,7 +50,7 @@ function App() {
             <li>
               <a
                 href="#contato"
-                className="hover:text-amber-400 transition-colors"
+                className="hover:text-custom-blue-light transition-colors"
               >
                 Contato
               </a>
@@ -68,21 +65,24 @@ function App() {
           <div className="flex justify-center space-x-4">
             <a
               href="https://github.com/hpzynha"
-              className="text-white hover:text-amber-400 transition-colors"
+              target="_blank"
+              className="text-white hover:text-custom-blue-light transition-colors"
             >
-              <Github size={24} />
+              <FaGithub size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/larissanrocha/"
-              className="text-white hover:text-amber-400 transition-colors"
+              target="_blank"
+              className="text-white hover:text-custom-blue-light transition-colors"
             >
-              <Linkedin size={24} />
+              <FaLinkedin size={24} />
             </a>
             <a
               href="https://www.instagram.com/dev.lari"
-              className="text-white hover:text-amber-400 transition-colors"
+              target="_blank"
+              className="text-white hover:text-custom-blue-light transition-colors"
             >
-              <InstagramIcon size={24} />
+              <FaInstagram size={24} />
             </a>
           </div>
         </div>
@@ -102,8 +102,8 @@ function App() {
               <p className="text-lg leading-relaxed text-gray-700">
                 Sou uma desenvolvedora mobile apaixonada por criar aplicativos
                 bonitos, performáticos e escaláveis com{" "}
-                <strong>Flutter e Dart</strong>. 
-                Adoro explorar novas tecnologias, aprimorar arquiteturas como{" "}
+                <strong>Flutter e Dart</strong>. Adoro explorar novas
+                tecnologias, aprimorar arquiteturas como{" "}
                 <strong>Clean Architecture e MVVM</strong> e otimizar a
                 experiência do usuário com interfaces modernas e responsivas.
                 Sempre em busca de novos desafios, também gosto de contribuir
@@ -120,6 +120,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Projetos</h2>
           <div className="grid md:grid-cols-2 gap-8">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <img
                 src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
@@ -142,7 +143,8 @@ function App() {
                 </div>
               </div>
             </div>
-
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <img
                 src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
@@ -165,6 +167,7 @@ function App() {
                 </div>
               </div>
             </div>
+            </a>
           </div>
         </div>
       </section>
@@ -175,15 +178,15 @@ function App() {
           <h2 className="text-3xl font-bold mb-12 text-center">Habilidades</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex items-center gap-4">
-              <FaReact className="w-8 h-8 text-amber-600" />
+              <FaFlutter className="w-8 h-8 text-custom-blue" />
               <div className="flex-1">
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">React</span>
-                  <span>60%</span>
+                  <span className="font-medium">Flutter/Dart</span>
+                  <span>90%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full">
                   <div
-                    className="h-2 bg-amber-600 rounded-full"
+                    className="h-2 bg-custom-blue rounded-full"
                     style={{ width: "90%" }}
                   ></div>
                 </div>
@@ -191,15 +194,15 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <Code2 className="w-8 h-8 text-amber-600" />
+              <FaReact className="w-8 h-8 text-custom-blue" />
               <div className="flex-1">
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Swift</span>
-                  <span>85%</span>
+                  <span className="font-medium">React</span>
+                  <span>60%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full">
                   <div
-                    className="h-2 bg-amber-600 rounded-full"
+                    className="h-2 bg-custom-blue rounded-full"
                     style={{ width: "85%" }}
                   ></div>
                 </div>
@@ -207,15 +210,15 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <Coffee className="w-8 h-8 text-amber-600" />
+              <FaPython className="w-8 h-8 text-custom-blue" />
               <div className="flex-1">
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Dart</span>
+                  <span className="font-medium">Python</span>
                   <span>80%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full">
                   <div
-                    className="h-2 bg-amber-600 rounded-full"
+                    className="h-2 bg-custom-blue rounded-full"
                     style={{ width: "80%" }}
                   ></div>
                 </div>
@@ -223,15 +226,15 @@ function App() {
             </div>
 
             <div className="flex items-center gap-4">
-              <Palette className="w-8 h-8 text-amber-600" />
+              <FaSwift className="w-8 h-8 text-custom-blue" />
               <div className="flex-1">
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">UI/UX Design</span>
-                  <span>75%</span>
+                  <span className="font-medium">Swift iOS</span>
+                  <span>65%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full">
                   <div
-                    className="h-2 bg-amber-600 rounded-full"
+                    className="h-2 bg-custom-blue rounded-full"
                     style={{ width: "75%" }}
                   ></div>
                 </div>
@@ -250,11 +253,11 @@ function App() {
               <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <Mail className="text-amber-600" />
+                  <Mail className="text-custom-blue" />
                   <span>larissa.nogueira.rocha@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="text-amber-600" />
+                  <MapPin className="text-custom-blue" />
                   <span>São Paulo, SP</span>
                 </div>
               </div>
@@ -270,7 +273,7 @@ function App() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
                 />
               </div>
               <div>
@@ -283,7 +286,7 @@ function App() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
                 />
               </div>
               <div>
@@ -296,12 +299,12 @@ function App() {
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-amber-600 text-white py-2 px-4 rounded-md hover:bg-amber-700 transition-colors"
+                className="w-full bg-custom-blue text-white py-2 px-4 rounded-md hover:bg-custom-blue transition-colors"
               >
                 Enviar Mensagem
               </button>
@@ -318,14 +321,26 @@ function App() {
               <p>© 2024 Larissa Rocha. Todos os direitos reservados.</p>
             </div>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-amber-400 transition-colors">
-                <Github size={20} />
+              <a
+                href="https://github.com/hpzynha"
+                target="_blank"
+                className="hover:text-custom-blue-light transition-colors"
+              >
+                <FaGithub size={20} />
               </a>
-              <a href="#" className="hover:text-amber-400 transition-colors">
-                <Linkedin size={20} />
+              <a
+                href="https://www.linkedin.com/in/larissanrocha/"
+                target="_blank"
+                className="hover:text-custom-blue-light transition-colors"
+              >
+                <FaLinkedin size={20} />
               </a>
-              <a href="#" className="hover:text-amber-400 transition-colors">
-                <InstagramIcon size={20} />
+              <a
+                href="https://www.instagram.com/dev.lari"
+                target="_blank"
+                className="hover:text-custom-blue-light transition-colors"
+              >
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>
