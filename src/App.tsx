@@ -1,4 +1,3 @@
-import { Mail, MapPin } from "lucide-react";
 import profileImage from "./assets/profile.jpg";
 import {
   FaReact,
@@ -9,6 +8,8 @@ import {
   FaSwift,
 } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
+import { LuMapPin } from "react-icons/lu";
+import { MdOutlineEmail } from "react-icons/md";
 
 function App() {
   return (
@@ -253,11 +254,11 @@ function App() {
               <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <Mail className="text-custom-blue" />
+                  <MdOutlineEmail className="text-custom-blue"size={24} />
                   <span>larissa.nogueira.rocha@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="text-custom-blue" />
+                  <LuMapPin className="text-custom-blue" size={24} />
                   <span>São Paulo, SP</span>
                 </div>
               </div>
