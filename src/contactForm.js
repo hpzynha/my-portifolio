@@ -33,38 +33,62 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="name">Nome:</label>
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
+          Nome
+        </label>
         <input
           type="text"
           id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
           required
         />
       </div>
       <div>
-        <label htmlFor="email">Email:</label>
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
+          Email
+        </label>
         <input
           type="email"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
           required
         />
       </div>
       <div>
-        <label htmlFor="message">Mensagem:</label>
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
+          Mensagem
+        </label>
         <textarea
           id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          rows={4}
+          value={mensagem}
+          onChange={(e) => setMensagem(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
           required
-        />
+        ></textarea>
       </div>
-      <button type="submit">Enviar</button>
-      {status && <div>{status}</div>} {/* exibe a mensagem de status */}
+      <button
+        type="submit"
+        className="w-full bg-custom-blue text-white py-2 px-4 rounded-md hover:bg-custom-blue transition-colors"
+      >
+        Enviar Mensagem
+      </button>
+      {status && <p className="mt-4 text-center">{status}</p>} {/* Exibe a mensagem de status */}
     </form>
   );
 }
