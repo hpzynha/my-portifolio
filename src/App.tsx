@@ -10,6 +10,8 @@ import {
 import { FaFlutter } from "react-icons/fa6";
 import { LuMapPin } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
+import ContactForm from "./ContactForm";
+
 
 function App() {
   return (
@@ -263,7 +265,8 @@ function App() {
                 </div>
               </div>
             </div>
-            <form className="space-y-4">
+            <ContactForm />
+            {/* <form className="space-y-4">
               <div>
                 <label
                   htmlFor="name"
@@ -309,7 +312,7 @@ function App() {
               >
                 Enviar Mensagem
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </section>

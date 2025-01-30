@@ -6,7 +6,7 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const data = {
@@ -44,8 +44,8 @@ function ContactForm() {
         <input
           type="text"
           id="name"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
           required
         />
@@ -76,8 +76,8 @@ function ContactForm() {
         <textarea
           id="message"
           rows={4}
-          value={mensagem}
-          onChange={(e) => setMensagem(e.target.value)}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-custom-blue focus:border-transparent"
           required
         ></textarea>
